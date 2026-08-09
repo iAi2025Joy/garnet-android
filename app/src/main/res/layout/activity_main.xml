@@ -1,4 +1,3 @@
-
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -19,9 +18,6 @@
 
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
-    <!-- Splash logo - shown while the page is first loading, hidden
-         once it finishes (see MainActivity's onPageFinished). Also
-         reused as the "no connection" screen's background image. -->
     <LinearLayout
         android:id="@+id/splashOverlay"
         android:layout_width="match_parent"
@@ -53,8 +49,6 @@
             android:layout_marginTop="24dp"
             android:indeterminateTint="@color/garnet_accent" />
 
-        <!-- Offline state - hidden by default, shown only if the page
-             genuinely fails to load (see onReceivedError). -->
         <LinearLayout
             android:id="@+id/offlineState"
             android:layout_width="wrap_content"
