@@ -1,0 +1,35 @@
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- INTERNET is required for the WebView to load garnet.institute-of-ai.org and reach the backend at all. -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- RECORD_AUDIO is required for Live Chat and the mic-dictation button - the WebView needs this granted to itself before it can, in turn, grant getUserMedia access to the page (see MainActivity's onPermissionRequest handling). -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <!-- Declares microphone use as optional, not required, so the app still installs on devices/emulators without one - Live Chat just won't work there, same as it wouldn't in a desktop browser without a mic. -->
+    <uses-feature
+        android:name="android.hardware.microphone"
+        android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.Garnet"
+        android:usesCleartextTraffic="false">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:theme="@style/Theme.Garnet">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+    </application>
+</manifest>
+```
