@@ -1,0 +1,90 @@
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/garnet_background">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <WebView
+            android:id="@+id/webView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/garnet_background" />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <!-- Splash logo - shown while the page is first loading, hidden
+         once it finishes (see MainActivity's onPageFinished). Also
+         reused as the "no connection" screen's background image. -->
+    <LinearLayout
+        android:id="@+id/splashOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/garnet_background"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/logo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/app_name"
+            android:textColor="@color/garnet_white"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.1" />
+
+        <ProgressBar
+            android:id="@+id/splashProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:indeterminateTint="@color/garnet_accent" />
+
+        <!-- Offline state - hidden by default, shown only if the page
+             genuinely fails to load (see onReceivedError). -->
+        <LinearLayout
+            android:id="@+id/offlineState"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="32dp"
+                android:gravity="center"
+                android:text="@string/no_connection_message"
+                android:textColor="@color/garnet_white"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/retryButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="@color/garnet_accent"
+                android:text="@string/retry"
+                android:textColor="@color/garnet_background" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>
+```
