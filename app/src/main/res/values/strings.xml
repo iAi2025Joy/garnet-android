@@ -1,0 +1,12 @@
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">GARNET</string>
+    <!-- Change this if the site ever moves to a different domain - this is the ONLY place the URL is hardcoded. -->
+    <string name="garnet_url" translatable="false">https://garnet.institute-of-ai.org</string>
+    <string name="no_connection_title">No internet connection</string>
+    <string name="no_connection_message">GARNET needs an internet connection to work. Please check your connection and try again.</string>
+    <string name="retry">Retry</string>
+    <string name="mic_permission_denied">Microphone access is needed for Live Chat and voice messages. You can enable it in Settings.</string>
+</resources>
+```
