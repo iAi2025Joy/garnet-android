@@ -1,4 +1,4 @@
-```xml
+
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">GARNET</string>
@@ -9,4 +9,3 @@
     <string name="retry">Retry</string>
     <string name="mic_permission_denied">Microphone access is needed for Live Chat and voice messages. You can enable it in Settings.</string>
 </resources>
-```
