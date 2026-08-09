@@ -1,4 +1,4 @@
-```xml
+
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Matches the web app's own dark background + gold/orange accent
@@ -8,4 +8,3 @@
     <color name="garnet_accent">#D4A650</color>
     <color name="garnet_white">#FFFFFF</color>
 </resources>
-```
