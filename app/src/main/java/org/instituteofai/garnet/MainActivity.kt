@@ -1,4 +1,4 @@
-```kt
+
 package org.instituteofai.garnet
 
 import android.Manifest
@@ -245,4 +245,3 @@ class MainActivity : AppCompatActivity() {
         }
     }
 }
-```
